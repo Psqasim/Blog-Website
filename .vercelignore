@@ -2,8 +2,7 @@ sanity
 node_modules
 .env
 .env.local
-.next
-.git
-README.md
-.sanity
+
+
+
 dist
