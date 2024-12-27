@@ -23,6 +23,8 @@ export default function Home({ posts }: Props) {
                       alt="blog-pic"
                       src={urlFor(post.mainImage).url()!}
                       fill
+                      width={640} 
+                      height={640}
                       className="object-cover brightness-75 group-hover:brightness-100 duration-300 group-hover:scale-110"
                     />
                   ) : (
@@ -39,8 +41,10 @@ export default function Home({ posts }: Props) {
                         {post.title || "Untitled Post"}
                       </h3>
                       {post.author?.image ? (
-                        <img
-                          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0"
+                        <Image
+                        width={40} 
+                         height={40} 
+                          className=" sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0"
                           src={urlFor(post.author.image).url()!}
                           alt="authorImage"
                         />

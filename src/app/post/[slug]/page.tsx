@@ -116,6 +116,8 @@ export default function PostPage({ params }: Props) {
         <Image
           src={urlFor(post.mainImage).url()}
           alt={post.title || "Post cover image"}
+          width={1280} 
+            height={384} 
           className="w-full h-96 object-cover"
           
         />
@@ -139,7 +141,10 @@ export default function PostPage({ params }: Props) {
                 <Image
                   src={urlFor(post.author.image).url()}
                   alt={`${post.author.name}'s profile`}
-                  className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                  width={48} // Replace with the desired width (in px)
+                  height={48} 
+                  className=" rounded-full object-cover flex-shrink-0"
+                  
                 />
               )}
               <p className="font-bodyFont text-base">
