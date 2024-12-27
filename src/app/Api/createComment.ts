@@ -2,7 +2,6 @@
 import { NextResponse } from 'next/server';
 import { client } from '../../../sanity/lib/client';
 
-
 export async function POST(req: Request) {
   try {
     const { _id, name, email, comment } = await req.json();
@@ -21,6 +20,8 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: 'Comment submitted' }, { status: 200 });
   } catch (err) {
+    // Now `err` is being logged
+    console.error(err);
     return NextResponse.json({ message: 'Could not submit comment' }, { status: 500 });
   }
 }

@@ -9,6 +9,7 @@ import { client } from "../../../../sanity/lib/client";
 import { Loader2 } from "lucide-react";
 import Header from "@/app/Compenents/Header";
 import Footer from "@/app/Compenents/Footer";
+import Image from "next/image";
 
 
 interface Props {
@@ -61,7 +62,7 @@ export default function PostPage({ params }: Props) {
 
   const onSubmit = async (data: FormInputs) => {
     try {
-      const response = await fetch("/api/createComment", {
+      const response:any = await fetch("/api/createComment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -112,7 +113,7 @@ export default function PostPage({ params }: Props) {
     <Header/>
     <div>
       {post.mainImage && (
-        <img
+        <Image
           src={urlFor(post.mainImage).url()}
           alt={post.title || "Post cover image"}
           className="w-full h-96 object-cover"
@@ -134,7 +135,7 @@ export default function PostPage({ params }: Props) {
           {post.author && (
             <div className="flex items-center gap-2">
               {post.author.image && (
-                <img
+                <Image
                   src={urlFor(post.author.image).url()}
                   alt={`${post.author.name}'s profile`}
                   className="w-12 h-12 rounded-full object-cover flex-shrink-0"
