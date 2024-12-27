@@ -20,8 +20,8 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: 'Comment submitted' }, { status: 200 });
   } catch (err) {
-    // Now `err` is being logged
-    console.error(err);
+    // Use `err` to log the error for debugging
+    console.error('Error occurred:', err);
     return NextResponse.json({ message: 'Could not submit comment' }, { status: 500 });
   }
 }
