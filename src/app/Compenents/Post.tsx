@@ -22,7 +22,7 @@ export default function Home({ posts }: Props) {
                     <Image
                       alt="blog-pic"
                       src={urlFor(post.mainImage).url()!}
-                      fill
+                
                       width={640} 
                       height={640}
                       className="object-cover brightness-75 group-hover:brightness-100 duration-300 group-hover:scale-110"
