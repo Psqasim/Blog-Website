@@ -19,9 +19,7 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ message: 'Comment submitted' }, { status: 200 });
-  } catch (err) {
-    // Use `err` to log the error for debugging
-    console.error('Error occurred:', err);
+  } catch {
     return NextResponse.json({ message: 'Could not submit comment' }, { status: 500 });
   }
 }
