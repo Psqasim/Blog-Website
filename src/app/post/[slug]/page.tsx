@@ -109,14 +109,15 @@ export default function PostPage({ params }: Props) {
     );
 
   return (
-    <>
-    <Header/>
+    
     <div>
+      <Header/>
       {post.mainImage && (
         <Image
           src={urlFor(post.mainImage).url()}
           alt={post.title || "Post cover image"}
           className="w-full h-96 object-cover"
+          
         />
       )}
 
@@ -276,8 +277,8 @@ export default function PostPage({ params }: Props) {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
-    <Footer/>
-    </>
+    
   );
 }

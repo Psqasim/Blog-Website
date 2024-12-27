@@ -39,7 +39,7 @@ export default function Home({ posts }: Props) {
                         {post.title || "Untitled Post"}
                       </h3>
                       {post.author?.image ? (
-                        <Image
+                        <img
                           className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0"
                           src={urlFor(post.author.image).url()!}
                           alt="authorImage"
