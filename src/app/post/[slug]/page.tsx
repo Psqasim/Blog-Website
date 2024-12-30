@@ -88,23 +88,45 @@ export default function PostPage({ params }: Props) {
     return (
   <>
         
-      <div className="w-full h-screen bg-gradient-to-br from-green-200 to-green-400 flex justify-center items-center flex-col gap-4">
-        <Loader2 className="h-12 w-12 animate-spin text-white" />
-        <div className="flex items-center gap-1">
-          <span className="text-white font-semibold animate-bounce delay-100">
-            Loading
-          </span>
-          <span className="text-white font-semibold animate-bounce delay-200">
-            .
-          </span>
-          <span className="text-white font-semibold animate-bounce delay-300">
-            .
-          </span>
-          <span className="text-white font-semibold animate-bounce delay-400">
-            .
-          </span>
+        <div className="w-full h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+      <div className="animate-pulse w-full max-w-3xl space-y-4">
+        {/* Header */}
+        <div className="h-10 bg-gray-300 rounded w-1/3"></div>
+
+        {/* Main Image Placeholder */}
+        <div className="h-48 bg-gray-300 rounded"></div>
+
+        {/* Title Placeholder */}
+        <div className="h-6 bg-gray-300 rounded w-2/3"></div>
+
+        {/* Description Placeholder */}
+        <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+
+        {/* Author Info */}
+        <div className="flex items-center space-x-4">
+          <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
+          <div className="h-4 bg-gray-300 rounded w-1/4"></div>
+        </div>
+
+        {/* Content Placeholder */}
+        <div className="space-y-2">
+          <div className="h-4 bg-gray-300 rounded w-full"></div>
+          <div className="h-4 bg-gray-300 rounded w-5/6"></div>
+          <div className="h-4 bg-gray-300 rounded w-4/6"></div>
+        </div>
+
+        {/* Comment Form Placeholder */}
+        <div className="space-y-3">
+          <div className="h-4 bg-gray-300 rounded w-1/3"></div>
+          <div className="h-10 bg-gray-300 rounded w-full"></div>
+          <div className="h-4 bg-gray-300 rounded w-1/3"></div>
+          <div className="h-10 bg-gray-300 rounded w-full"></div>
+          <div className="h-4 bg-gray-300 rounded w-1/3"></div>
+          <div className="h-20 bg-gray-300 rounded w-full"></div>
+          <div className="h-10 bg-gray-300 rounded w-1/3"></div>
         </div>
       </div>
+    </div>
       </>
     );
 
@@ -141,7 +163,7 @@ export default function PostPage({ params }: Props) {
                 <Image
                   src={urlFor(post.author.image).url()}
                   alt={`${post.author.name}'s profile`}
-                  width={48} // Replace with the desired width (in px)
+                  width={48} 
                   height={48} 
                   className=" rounded-full object-cover flex-shrink-0"
                   

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { urlFor } from "../../../sanity/lib/image";
 import { Post } from "../../../typing";
-import { post } from "../../../sanity/post";
+
 
 interface Props {
   posts: Post[];
