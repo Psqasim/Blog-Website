@@ -10,7 +10,7 @@ import { Loader2 } from "lucide-react";
 import Header from "@/app/Compenents/Header";
 import Footer from "@/app/Compenents/Footer";
 import Image from "next/image";
-
+export const revalidate = 0
 interface Props {
   params: Promise<{ slug: string }>;
 }
