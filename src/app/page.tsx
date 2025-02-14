@@ -1,4 +1,4 @@
-export const revalidate = 0
+
 import Banner from "./Compenents/Banner";
 import BannerBottom from "./Compenents/BannerBottom";
 import Footer from "./Compenents/Footer";
