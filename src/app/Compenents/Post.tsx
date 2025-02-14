@@ -1,9 +1,9 @@
+export const revalidate = 0
 import "slick-carousel/slick/slick.css";
 import Image from "next/image";
 import Link from "next/link";
 import { urlFor } from "../../../sanity/lib/image";
 import { Post } from "../../../typing";
-export const revalidate = 0
 interface Props {
   posts: Post[];
 }
