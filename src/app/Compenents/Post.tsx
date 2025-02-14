@@ -1,4 +1,4 @@
-export const revalidate = 0
+
 import "slick-carousel/slick/slick.css";
 import Image from "next/image";
 import Link from "next/link";
