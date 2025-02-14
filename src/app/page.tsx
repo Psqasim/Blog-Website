@@ -5,7 +5,7 @@ import Header from "./Compenents/Header";
 import Post from "./Compenents/Post";
 import { client } from "../../sanity/lib/client";
 
-
+export const revalidate = 0
 // Fetch posts from Sanity
 async function fetchPosts() {
   const query = `*[_type == "post"]{

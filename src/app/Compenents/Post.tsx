@@ -3,8 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { urlFor } from "../../../sanity/lib/image";
 import { Post } from "../../../typing";
-
-
+export const revalidate = 0
 interface Props {
   posts: Post[];
 }
@@ -23,8 +22,7 @@ export default function Home({ posts }: Props) {
                     <Image
                       alt="blog-pic"
                       src={urlFor(post.mainImage).url()!}
-                
-                      width={640} 
+                      width={640}
                       height={640}
                       className="object-cover brightness-75 group-hover:brightness-100 duration-300 group-hover:scale-110"
                     />
@@ -43,8 +41,8 @@ export default function Home({ posts }: Props) {
                       </h3>
                       {post.author?.image ? (
                         <Image
-                        width={40} 
-                         height={40} 
+                          width={40}
+                          height={40}
                           className=" sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0"
                           src={urlFor(post.author.image).url()!}
                           alt="authorImage"
@@ -66,34 +64,31 @@ export default function Home({ posts }: Props) {
                     </p>
                   </div>
                   {/* Read More Button */}
-      
-            <div className="w-full bg-transparent hover:bg-green-700 text-green-700 hover:text-white border-2 border-green-700 font-semibold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center group">
-              <span>Read More</span>
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-4 w-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M9 5l7 7-7 7" 
-                />
-              </svg>
-            </div>
+
+                  <div className="w-full bg-transparent hover:bg-green-700 text-green-700 hover:text-white border-2 border-green-700 font-semibold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center group">
+                    <span>Read More</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
                 </div>
-                
               </div>
             </Link>
           ))}
         </div>
       </div>
       {/* ============ Post Part End here =========== */}
-      
-          
     </div>
   );
 }
